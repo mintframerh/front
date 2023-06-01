@@ -1,0 +1,279 @@
+.overviewCon{
+    display: flex;
+    gap: 4rem;
+    padding: 2rem;
+}
+.bigMarketWrapper{
+    margin-bottom: 2rem;
+}
+.overview{
+    position: relative;
+}
+/* ==========ACTIVE LINE BELOW======== */
+.overview::after{
+    content: "";
+    position:absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color:var(--color-primary);
+}
+/* ==========MARKET VOLUME CONTAINER======== */
+.marketVolume{
+    padding: 2rem;
+}
+.marketVolumetop{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.marketVolumetopRight{
+    display: flex;
+}
+/* ==========DAYS FILTER======== */
+.day7{
+    padding:1rem;
+    border: 1px solid ;
+    border-radius: 1rem 0 0 1rem;
+    text-align: center;
+}
+.day30{
+    padding: 1rem;
+    border: 1px solid ;
+    border-left: none;
+    border-right: none;
+}
+
+.dayall{
+    padding: 1rem;
+    border: 1px solid ;
+    border-radius: 0 1rem 1rem 0;
+}
+/* ==========MARKET VOLUME BOTTOM======== */
+.marketVolumetopbtm{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--color-bg-variant);
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+}
+/* ==========MARKET VOLUME ICONS======== */
+.iconCon{
+    background-color: var(--color-bg);
+    text-align: center;
+    padding: 0.8rem;
+    border-radius: 50%;
+}
+.changeres{
+    display: flex;
+    gap:1rem
+}
+/* ===============SALES CONTAINER STATS========= */
+.salesnum{
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+/* ===============TRENDING CONTAINER ============ */
+.trendingContainer{
+    margin: 1rem;
+}
+.trendText{
+    display: flex;
+}
+.trendwrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem ;
+    margin: 1rem 0;
+}
+.exploree{
+    color: var(--color-primary);
+}
+.SwiperImageContainer{
+    width: 90%;
+    height: 40vh;
+    margin: 1rem;
+    border: 0.5px solid;
+    border-radius: 2rem;
+}
+.SwiperImageContainer img{
+    border-radius: 2rem;
+   
+}
+.swipename{
+    text-align: center;
+    margin: 1.5rem;
+}
+
+
+
+/* ===============RECENT CONTAINER ============ */
+.recentTop{
+    display: flex;
+    gap: 2rem;
+}
+.recentTop h3{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.recentSoldContainer{
+    background-color: rgb(15,10,22);
+    padding: 2rem ;
+    border-radius: 1rem;
+}
+.recentspread{
+    margin:1rem 0 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.recentspread h3{
+    font-size: 1rem;
+    font-weight: 200;
+    
+}
+.recentSoldText{
+    font-size: 1.4rem;
+    padding: 2rem;
+}
+.recentNameAndImg{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    width: 33%;
+}
+.rareRight{
+    width: 33%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.rare{
+    width: 33%;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 0.3rem 0.5rem;
+    width: fit-content;
+    font-weight: 700;
+}
+.recentNameAndImg img{
+    border-radius: 50%;
+}
+.recentNameAndImg h2{
+    color: var(--color-pink);
+}
+.soldcon{
+    margin: 1rem 0;
+}
+.namee{
+    font-size: 1rem;
+}
+.loading__center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh;
+}
+.ring{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: ring 2s linear infinite;
+}
+@keyframes ring{
+    0%{
+        transform: rotate(0deg);
+        box-shadow: 1px 5px 2px #e65c00;
+    }
+    50% {
+        transform: rotate(180deg);
+        box-shadow: 1px 5px 2px #18b201;
+        }
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 1px 5px 2px #0456c8; 
+        }
+}
+.ring::before{
+    position: absolute;
+    content: '';
+    left:0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255,255,255,.3);
+}
+.loading{
+    color: #737373;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing:1px;
+    line-height: 200px;
+    animation: text 3s ease-in-out  infinite;
+}
+@keyframes text{
+    0%{
+        color:black;
+    }
+}
+.singleTrendingItem{
+    cursor: pointer;
+}
+@media screen and (max-width:1024px) {
+    
+}
+@media screen and (max-width:768px) {
+    .marketVolumetopLeft h2{
+        font-size: 1.2rem;
+    }
+    .marketVolumetopLeft p{
+        font-size: 0.8rem;
+    }
+    .day30{
+        padding: 1rem;
+    }
+    .marketVolumetopbtm{
+        gap: 1rem;
+    }
+    .salesnum h2{
+        font-size: 1.2rem;
+    }
+    .namee{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:600px) {
+    .marketVolumetop{
+        flex-direction: column;
+        gap: 0.5rem;
+        justify-content: flex-start;
+    }
+    .trendingItemText{
+        font-size: 1.2rem;
+    }
+    .trendText{
+        font-size: 0.7rem;
+    }
+    .marketVolumetopbtm{
+        gap: 0.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .salesnum h2{
+        font-size: 1rem;
+    }
+    .namee{
+        font-size: 0.8rem;
+    }
+    .recentSoldContainer{
+        padding: 2 0.5rem;
+        width: 100%;
+    }
+}

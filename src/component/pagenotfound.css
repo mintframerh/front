@@ -1,0 +1,28 @@
+.pagenotfoundContainer{
+    display: flex;
+    background-color: white;
+    color: black;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.leftpagenotfound{
+    width: 50%;
+    height: 100%;
+}
+.rightpagenotfound{
+    width: 50%;
+}
+.lost{
+    padding: 0 1rem;
+}
+.pageTxt{
+    padding: 0 1rem;
+    margin: 2rem 0;
+}
+.goHome{
+    margin-left:1rem ;
+}

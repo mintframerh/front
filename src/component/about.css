@@ -1,0 +1,17 @@
+.aboutSection{
+    min-height: 70vh;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+.aboutH1{
+    text-align: center;
+    margin: 4rem;
+}
+.aboutText{
+    font-size: 1.2rem;
+}
+@media screen and (max-width:768px){
+    .aboutText{
+        font-size: 15px;
+    }
+}

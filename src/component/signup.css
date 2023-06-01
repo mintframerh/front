@@ -1,0 +1,76 @@
+.signupSection{
+    width: 50%;
+    margin: auto;
+    min-height: 80vh;
+   
+}
+.coverArt{
+    margin-top: 4rem;
+   
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.input{
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-radius: none;
+    border-bottom:1px solid var(--text-color);
+    background-color: transparent;
+    color: var(--text-color);
+    margin: 2rem;
+    outline: none;
+    font-size: 1.2rem;
+}
+.passdiv{
+    display: flex;
+}
+.password{
+    border: none;
+    width: 90%;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    background-color: transparent;
+     outline: none;
+}
+.eye{
+    width: 10%;
+    cursor: pointer;
+    color: white;
+}
+.continue{
+    width: 40%;
+    margin: auto;
+    margin-bottom: 3rem;
+    border: none;
+}
+.accounttxt{
+    text-align: center;
+    margin: 1rem;
+}
+.log{
+    color: var(--color-primary);
+}
+.error{
+    color: red;
+}
+.success{
+    color: green;
+    text-align: center;
+    font-weight: 600;
+}
+@media screen and (max-width:1024px) {
+ .signupSection{width: 65%;}
+}
+@media screen and (max-width:768px) {
+ .signupSection{
+    width: 75%;
+ }
+}
+@media screen and (max-width:600px) {
+ .signupSection{
+    width: 100%;
+ }
+}

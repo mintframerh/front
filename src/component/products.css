@@ -1,0 +1,36 @@
+.productContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.pCon{
+    width: 22%;
+}
+.numberContainer{
+    margin: auto;
+    width: fit-content;
+    padding: 0.5rem;
+}
+.active{
+    background-color: var(--text-color);
+}
+@media screen and (max-width:1024px) {
+    .pCon{
+        width: 33%;
+    }
+}
+@media screen and (max-width:768px) {
+    .pCon{
+        width: 50%;
+    }   
+}
+@media screen and (max-width:600px) {
+    .pCon{
+        width: 75%;
+    }
+}
+@media screen and (max-width:400px) {
+    .pCon{
+        width: 85%;
+    }
+}

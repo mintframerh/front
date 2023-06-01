@@ -1,0 +1,30 @@
+.formCont{
+    display: flex;
+}
+.formlf{
+    width: 50%;
+}
+.adinput{
+    background-color:  var(--color-primary);
+    color: white !important;
+    border-radius: 5px;
+    padding: 0.5rem 0;
+    border:none !important;
+    width:88%;
+}
+.adinput::placeholder{
+    color: white !important;
+    text-align: center;
+}
+.label{
+    width: 100%;
+
+}
+@media screen and (max-width:768px) {
+ .formCont{
+    flex-direction: column;
+ }   
+ .formlf{
+    width: 100%;
+ }
+}

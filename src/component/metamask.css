@@ -1,0 +1,18 @@
+.meta{
+    width: 50px;
+}
+.withdrawContainerMeta{
+    width: 50%;
+    margin: auto;
+}
+.flexin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+}
+.ineth{
+   
+    margin: 2rem auto;
+    width: fit-content;
+}

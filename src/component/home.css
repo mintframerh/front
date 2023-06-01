@@ -1,0 +1,249 @@
+.wrapper{
+    position: relative;
+    height: 87vh;
+   
+}
+.homeContainer{
+  color: var(--text-color);
+  position: relative;
+}
+.homeContainer::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url('../image/digital-art.png');
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.4;
+    z-index: -1;
+    
+}
+.welcomeText{
+    line-height:2rem;
+    font-size: 3rem;
+    font-weight: 600;
+}
+.mintyText{
+    line-height:4rem;
+    font-size: 4rem;
+    font-weight: 800;
+    position: relative;
+    color: #f401b8;
+    letter-spacing: 0.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.buyText{
+      font-weight: 500;
+    word-spacing: 0.3rem;
+}
+.cover{
+    position: absolute;
+    left: 10%;
+    top: 40%;
+    /* border: solid; */
+    width: 80%;
+}
+.tests{
+    /* border: solid; */
+    width: 100px;
+}
+
+.containerr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+
+
+
+
+.box-container {
+    position: relative;
+    width:200px;
+    height: 200px;
+    margin:-2rem;
+}
+  
+  .box {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    border: 4px solid;
+    background-color: transparent;
+    border-color: rgb(219,0,129);
+  }
+  
+  .box1 {
+    top: 40px;
+    left: 40px;
+    z-index: 1;
+  }
+  
+  .box2 {
+    top: 60px;
+    left: 60px;
+    z-index: 2;
+  }
+
+.descovery{
+    display: flex;
+    align-items: flex-start;
+   margin: 2rem 0rem;
+   width: 100%;
+   text-align: center;
+}
+.left{
+    width: 50%;
+    padding: 2rem;
+}
+.right{
+    width: 50%;
+    padding: 2rem;
+}
+.homeImageContainer{
+    padding: 1rem;
+    height: 50vh;
+    
+}
+.discoverText{
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+.immerseText{
+    color: var(--color-primary);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.getStarted{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    
+}
+.getSbtn{
+    padding: 0.5rem 4rem;
+    border-radius: 0.3rem;
+    background-color: var(--color-pink);
+}
+.colorful-text {
+    background: linear-gradient(to bottom,  #b202d1 0%, #ff00f2 50%,rgb(219,0,129) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+
+
+
+
+.homeAboutContainer{
+    background-color: black;
+    /* background-color: var(--color-secondary); */
+    margin: 2rem;
+    padding: 2rem;
+    text-align: center;
+}
+.homeAboutText{
+    color: rgba(173, 173, 168, 0.212);
+}
+
+@media screen and (max-width:1024px) {
+    .cover{
+        left:15%
+    }
+    .mintyText{
+    line-height:2rem;
+    font-size: 3rem;
+    font-weight: 800;
+    position: relative;
+    color: #f401b8;
+    letter-spacing: 0.1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    }
+    .welcomeText{
+        line-height:1rem;
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .mintyText{
+        letter-spacing: 0;
+    }
+    .cover{
+        left: 15%;
+    }
+}
+@media screen and (max-width:600px) {
+   .tests{
+    /* border: solid; */
+    width: 100%;
+   }
+    .box{
+        width: 35px;
+        height: 80px;
+    }
+     .cover{
+        left: 3%;
+        padding: 1rem;
+        /* border: solid; */
+    }
+    .descovery{
+    flex-direction: column;
+    padding-top: 2rem;
+    }
+    .right{
+        width: 100%;
+        /* margin: 1rem; */
+    }
+    .left{
+        width: 100%;
+        /* margin: 1rem; */
+    }
+    .homeImageContainer{
+        height: 40vh;
+        display: none;
+}
+.welcomeText{
+    line-height:1rem;
+    font-size: 2rem;
+    font-weight: 300;
+}
+.mintyText{
+    line-height:2rem;
+    font-size: 3.0rem;
+    font-weight: 800;
+    padding-bottom: 0.5rem;
+}
+.buyText{
+    font-weight: 500;
+  word-spacing: 0.1rem;
+  font-size: 20px;
+}
+.magadded{
+    margin-bottom: 8rem;
+}
+.homeAboutContainer{
+    margin-top: 8rem;
+    margin-bottom: 16rem;
+}
+}
+@media screen and (max-width:350px) {
+    .mintyText{
+        font-size: 2rem;
+    }
+    .box-container{
+        margin: -1rem;
+        bottom: -3rem;
+    }
+}

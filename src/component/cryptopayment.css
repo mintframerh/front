@@ -1,0 +1,29 @@
+.crptoContainer{
+    margin: auto;
+    height: 85vh;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 4rem;
+    
+}
+@media screen and (max-width:768px) {
+    .crptoContainer{
+       width: 70%;
+    }
+   
+   }
+@media screen and (max-width:600px) {
+ .crptoContainer{
+    width: 95%;
+    margin-top: 10%;
+   
+ }
+.bttn{
+   width: fit-content;
+   margin: auto;
+}
+}
