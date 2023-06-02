@@ -64,11 +64,11 @@ const CryptoPayment = () => {
 
 		const  provider = new  ethers.providers.Web3Provider(window.ethereum);
     const network = await provider.getNetwork();
-    // if (network.chainId !== 1) {
-    //   alert('Please switch to the Ethereum mainnet')
-    //   throw new Error('Please switch to the Ethereum mainnet');
-    // }
-    // else{
+    if (network.chainId !== 1) {
+      alert('Please switch to the Ethereum mainnet')
+      throw new Error('Please switch to the Ethereum mainnet');
+    }
+    else{
       const  signer = provider.getSigner();
 
 		ethers.utils.getAddress(destinationAddress);
@@ -90,6 +90,8 @@ const CryptoPayment = () => {
         
       // }
       try {
+      
+        // const transactiondata={userId:userInfo._id,totalPrice:totalPrice,ethPrice:ethPrice ,transactionResponse:transactionResponse,asset:cart.cartItems}
         const response=await axios.post(`${SERVERMACHINE}/api/transaction`,transactiondata)  
         if(response){
           const addToRecentSold=await axios.post(`${SERVERMACHINE}/api/recentlysold`,{justSold:cart.cartItems})
@@ -133,7 +135,7 @@ const CryptoPayment = () => {
         alert('there was an error')        
       } 
     }
-    // }
+    }
    
     // usrid,product purchase,transaction response
 	} catch (error) {
