@@ -38,7 +38,7 @@ const Navbar = () => {
           <div className="leftNavbar">
             <li>
               <Link to="/admin/createNewProduct" onClick={() => setShow(false)}>
-                CreateProduct
+                Withdraw
               </Link>
             </li>
             <li>
