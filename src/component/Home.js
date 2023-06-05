@@ -20,9 +20,9 @@ const Home = () => {
               <div style={{display:"flex", height:"80px" , alignItems:"flex-end"}} className="tests">
                
                 <h1 className="mintyText colorful-text">MintyLand </h1>
-              <div class="box-container">
-                <div class="box box1"></div>
-                <div class="box box2"></div>
+              <div className="box-container">
+                <div className="box box1"></div>
+                <div className="box box2"></div>
             </div>  
               </div>
                

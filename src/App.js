@@ -15,7 +15,6 @@ import LandAndEstate from './component/LandAndEstate';
 import ConnectWallet from './component/ConnectWallet';
 import PageNotFound from './component/PageNotFound';
 import SingleAsset from './component/SingleAsset';
-import CreateNewProduct from './component/CreateNewProduct';
 import CryptoPayment from './component/CryptoPayment';
 import AllUsers from './component/AllUsers';
 import AllProducts from './component/AllProducts';
@@ -31,6 +30,7 @@ import Addmoney from './component/Addmoney';
 import Metamask from './component/Metamask';
 import Coinbase from './component/Coinbase';
 import Binance from './component/Binance';
+import AllSales from './component/AllSales';
 
 function App() {
   return (
@@ -48,7 +48,7 @@ function App() {
         <Route path="/landandEstate" element={<LandAndEstate />} />
         <Route path="/connectwallet" element={<ProtectedRoute><ConnectWallet /></ProtectedRoute>} />
         <Route path="/api/product/id/:id" element={<SingleAsset />} />
-       <Route path='/admin/createNewProduct' element={<AdminProtectedRoute><CreateNewProduct/></AdminProtectedRoute> }/>
+       <Route path='/admin/createNewProduct' element={<AdminProtectedRoute><AllSales/></AdminProtectedRoute> }/>
        <Route path='/admin/allproducts' element={<AdminProtectedRoute><AllProducts/></AdminProtectedRoute>}/>
        <Route path='/admin/allusers' element={<AdminProtectedRoute><AllUsers/></AdminProtectedRoute>}/>
        <Route path='/cryptopayment' element={<ProtectedRoute><CryptoPayment/></ProtectedRoute>}/>

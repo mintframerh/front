@@ -52,7 +52,7 @@ const Coinbase = () => {
                    const ethPrice=Number(ethPricee.toFixed(18));
                  
                    setEthPrice(ethPrice)
-                   const withdrawDetails={userAddress:addressRef,amountWitdraw:amounref,paymentMethod,WithdrawalId:userInfo._id,amountInEth:ethPrice}
+                   const withdrawDetails={userAddress:addressRef,amountWitdraw:amounref,paymentMethod,WithdrawalId:userInfo._id,amountInEth:ethPrice,email:userInfo.email}
                    const initialWithdraw=await axios.post(`${SERVERMACHINE}/api/transaction/withdraw`,withdrawDetails) 
                    if (initialWithdraw){
                      await axios.patch(`${SERVERMACHINE}/api/updatebalance/withdraw/${userInfo._id}`,{withdrawPrice:amounref})
