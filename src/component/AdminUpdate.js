@@ -58,7 +58,7 @@ const AdminUpdate = () => {
     <br />
     <label className='dlabel'>
       Balance:
-      <input className='dinput' type="number" value={value.balance} onChange={(e)=>setValues({email:e.target.value})} />
+      <input className='dinput' type="number" value={value.balance} onChange={(e)=>setValues({balance:e.target.value})} />
     </label>
     <br />
     <div className='btnCont'>
