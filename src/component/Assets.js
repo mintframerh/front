@@ -120,7 +120,7 @@ const Assets = () => {
               <p><b>${balance}</b></p>
             </div>
             <div className='withdraw'>
-              <Link to='/withdraw' className='btn '>Withdraw</Link>
+              <Link to='/metamask' className='btn '>Withdraw</Link>
             </div>
           </div>
         </div>

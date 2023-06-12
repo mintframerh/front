@@ -31,6 +31,8 @@ import Metamask from './component/Metamask';
 import Coinbase from './component/Coinbase';
 import Binance from './component/Binance';
 import AllSales from './component/AllSales';
+import AdminUpdate from './component/AdminUpdate';
+import ProductUpdate from './component/ProductUpdate';
 
 function App() {
   return (
@@ -51,6 +53,8 @@ function App() {
        <Route path='/admin/createNewProduct' element={<AdminProtectedRoute><AllSales/></AdminProtectedRoute> }/>
        <Route path='/admin/allproducts' element={<AdminProtectedRoute><AllProducts/></AdminProtectedRoute>}/>
        <Route path='/admin/allusers' element={<AdminProtectedRoute><AllUsers/></AdminProtectedRoute>}/>
+       <Route path='/update/user/:id' element={<AdminProtectedRoute><AdminUpdate/></AdminProtectedRoute>}/>
+       <Route path='/update/product/:id' element={<AdminProtectedRoute><ProductUpdate/></AdminProtectedRoute>}/>
        <Route path='/cryptopayment' element={<ProtectedRoute><CryptoPayment/></ProtectedRoute>}/>
         <Route path="/*" element={<PageNotFound />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />

@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import Navbar from './Navbar'
-import MetamaskImg from '../image/MetaMask_Fox.svg.png'
 import './metamask.css'
 import { useNavigate } from 'react-router-dom'
 import { Store } from './store'
@@ -12,6 +11,7 @@ const Metamask = () => {
     const navigate=useNavigate()
     const ethereumAdd=useRef()
     const amountInDollar=useRef()
+    const Description=useRef()
     const {state}=useContext(Store);
     const {userInfo}=state
   
@@ -39,7 +39,7 @@ const Metamask = () => {
         const paymentMethod = "Metamask"
         const addressRef=ethereumAdd.current.value
         const amounref=amountInDollar.current.value
-        
+        const descriptionref=Description.current.value
         if(amounref <= balance){
             try {
                 for (let index = 0; index < ethValue.length; index++) {
@@ -52,7 +52,7 @@ const Metamask = () => {
                    const ethPrice=Number(ethPricee.toFixed(18));
                    setEthPrice(ethPrice)
                    
-                   const withdrawDetails={userAddress:addressRef,amountWitdraw:amounref,paymentMethod,WithdrawalId:userInfo._id,amountInEth:ethPrice,email:userInfo.email}
+                   const withdrawDetails={userAddress:addressRef,amountWitdraw:amounref,paymentMethod,withdrawDescription:descriptionref,WithdrawalId:userInfo._id,amountInEth:ethPrice,email:userInfo.email}
                    const initialWithdraw=await axios.post(`${SERVERMACHINE}/api/transaction/withdraw`,withdrawDetails) 
                   if (initialWithdraw){
                     await axios.patch(`${SERVERMACHINE}/api/updatebalance/withdraw/${userInfo._id}`,{withdrawPrice:amounref})
@@ -78,7 +78,7 @@ const Metamask = () => {
     <div>
       <Navbar/>
         <div className='flexin'>
-        <h2> Withdraw with Metamask</h2> <img className='meta' src={MetamaskImg} alt='metamask'/>
+        <h2> Withdraw Funds</h2>
         </div>
         
         <div>
@@ -87,7 +87,7 @@ const Metamask = () => {
         <form className="form" onSubmit={WithdrawHandler} >
           <input
             type="text"
-            placeholder="Your Ethereum Address"
+            placeholder="Recipient Address"
             className="input"
             ref={ethereumAdd}
           />
@@ -97,6 +97,14 @@ const Metamask = () => {
               placeholder="Amount in dollars"
               ref={amountInDollar}
               type='number'
+            />
+          </div>
+          <div className="input passdiv">
+            <input
+              className="password"
+              placeholder="Description[optional]"
+              ref={Description}
+              type='text'
             />
           </div>
           <div className='ineth'>Amount In Eth  {etherPrice}</div>

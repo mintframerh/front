@@ -44,16 +44,21 @@ const AllSales = () => {
           <h2 style={{textAlign:"center",margin:"1rem"}}>All Withdraw</h2>
           <h3>TotalWithdraw={totalSales.length}</h3>
           <div style={{height:"88vh",overflow:"auto",marginBottom:"2rem"}}>
-
+          <section className='bottomContainer'>
+            <p  className='adp mail'>email</p>
+              <p  className='adp mail'>userAddress</p>
+              <p  className='adp mail'>Amount in dollar</p>
+              <p  className='adp mail'>Amount in Ethereum</p>           
+            </section>
           {totalSales.length===0? <p>No withdraw so far</p>: totalSales.map((singleSale)=>{
-          const {_id,email,userAddress,amountWitdraw,paymentMethod}=singleSale
+          const {_id,email,userAddress,amountWitdraw,amountInEth}=singleSale
           return(
             <div>
             <section key={_id} className='bottomContainer'>
             <p  className='adp mail'>{email}</p>
               <p  className='adp mail'>{userAddress}</p>
               <p  className='adp mail'>{amountWitdraw}</p>
-              <p  className='adp mail'>{paymentMethod}</p>           
+              <p  className='adp mail'>{amountInEth}</p>           
             </section>
             <hr />
             </div>

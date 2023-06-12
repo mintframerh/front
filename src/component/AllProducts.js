@@ -7,6 +7,7 @@ import "./Allproduct.css"
 import Navbar from './Navbar'
 import { SERVERMACHINE } from './envconfig'
 import Footer from './Footer'
+import { Link } from 'react-router-dom'
 
 const AllProducts = () => {
   const [loading,setloading]=useState(true)
@@ -52,15 +53,23 @@ const AllProducts = () => {
        <Navbar />
         <h2 style={{textAlign:"center",margin:"1rem"}}>All Products</h2>
         <div style={{height:"88vh",overflow:"auto",marginBottom:"2rem"}} >
+        <section  className='bottomContainer headd'>
+            <p className='ProImg'>Asset Image</p>
+            <p className=''>name</p>
+            <p className=''>category</p>
+            <p className=''>update</p>
+            <TiTrash/>
+          </section>
         {product.map((singleProduct)=>{
         const {name,_id,image,category}=singleProduct
         return(
           <div  key={_id}>
-          <section  className='bottomContainer'>
-            <img className='ProImg'   src={image} alt={name} />
-            <p  style={{width:"25%"}}>{name}</p>
-            <p  style={{width:"25%"}}>{category}</p>
-            <TiTrash onClick={()=>deleteProductHandler(_id)} style={{cursor:"pointer",width:"25%"}}/>
+          <section  className='bottomContainer headd' >
+            <img className='ProImg'  src={image} alt={name} />
+            <p style={{width:"20%"}}>{name}</p>
+            <p style={{width:"20%"}}>{category}</p>
+            <Link to={`/update/product/${_id}`} className='update pupdate'>update</Link>
+            <TiTrash onClick={()=>deleteProductHandler(_id)} style={{cursor:"pointer"}}/>
           </section>
           <hr/>
           </div>

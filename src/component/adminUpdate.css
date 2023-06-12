@@ -1,0 +1,61 @@
+.dcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #06060D;
+  }
+  
+  .dform {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .dlabel {
+    display: block;
+    margin-bottom: 10px;
+    color: black;
+  }
+  .btnCont{
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .dinput {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  .dbutton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  .red{
+    background-color: red;
+  }
+  
+  
+  .dbutton:hover {
+    background-color: #45a049;
+  }
+  .red:hover{
+    background-color: rgb(100, 3, 3);
+  }
+  
+  @media (max-width: 600px) {
+    .dform {
+      width: 90%;
+    }
+  }

@@ -8,14 +8,25 @@
     justify-content: space-between;
     text-align: center;
     padding: 1rem 0;
-    /* border: solid; */
+   
+}
+.update{
+    background-color: greenyellow;
+    padding: 0.2rem;
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+}
+.pupdate{
+    height: fit-content;
+    padding: 0.2rem;   
 }
 .ProImg{
     width: 50px;
     height: 50px;
 }
 .adp{
-    width: 25%;
+    width: 20%;
 }
 @media screen and (max-width:600px) {
     .mail{
