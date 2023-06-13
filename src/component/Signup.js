@@ -92,7 +92,8 @@ const Signup = () => {
       (password !== "") &&
       (confirmPassword !== "")
     ) {
-      let newdata={ ...data, email:email.toLowercase(), username:username, password:password, confirmPassword:confirmPassword }
+      const ChangeEmail=email.toLowerCase()
+      let newdata={ ...data, email:ChangeEmail, username:username, password:password, confirmPassword:confirmPassword }
       console.log(newdata)
       axios.post(`${SERVERMACHINE}/api/user/signin`,newdata)
       // axios.post('https://cloudy-toad-wig.cyclic.app/api/user/signin',newdata)
