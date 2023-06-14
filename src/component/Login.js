@@ -65,9 +65,10 @@ const Login = () => {
        password !== ""
       
      ) {
+      const ChangeEmail=email.toLowerCase()
        let data = {
          ...details,
-         email: email,
+         email: ChangeEmail,
          password: password,
         
        };
