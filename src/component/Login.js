@@ -48,8 +48,7 @@ const Login = () => {
     
      let email = emailRef.current.value;
      let password = passwordRef.current.value;
-    
-    
+
      if (email === "" || email === null) {
        setEmailError("Enter your email");
        removeErrorMessage();
@@ -58,23 +57,18 @@ const Login = () => {
        setPasswordError("Enter your password");
        removeErrorMessage();
      }
-    
      if (
        email !== "" &&
-       
        password !== ""
-      
      ) {
       const ChangeEmail=email.toLowerCase()
        let data = {
          ...details,
          email: ChangeEmail,
          password: password,
-        
        };
          await axios
          axios.post(`${SERVERMACHINE}/api/user/login`,data,{
-        //  .post("https://cloudy-toad-wig.cyclic.app/api/user/login", data, {
            headers: {
              "Content-Type": "application/json",
            },
